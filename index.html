@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+    <title>typo</title>
+    <style>
+        body {
+            font-size: large;
+            text-align: center;
+        }
+
+        textarea {
+            font-size: x-large;
+            width: 600px;
+            height: 200px;
+        }
+
+        textarea:focus {
+            outline: none;
+        }
+
+        textarea::placeholder {
+            color: hsl(0, 0%, 80%);
+        }
+
+        #message {
+            height: 50px;
+        }
+
+        .complete {
+            background-color: hsl(120, 10%, 80%);
+        }
+
+        .incomplete {
+            background-color: hsl(0, 10%, 70%);
+        }
+    </style>
+</head>
+<body>
+    <textarea id="carrier" placeholder="carrier"></textarea>
+    <br>
+    <textarea id="message" placeholder="message"></textarea>
+    <br>
+    <textarea id="output" placeholder="output" readonly></textarea>
+
+    <script src="app.js"></script>
+</body>
+</html>
