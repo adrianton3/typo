@@ -234,6 +234,16 @@
         }
 
         function run () {
+            if (
+                elements.carrier.value.length <= 0 ||
+                elements.message.value.length <= 0
+            ) {
+                elements.output.value = ''
+                elements.output.classList.remove('complete')
+                elements.output.classList.remove('incomplete')
+                return
+            }
+
             const start = performance.now()
             const result = everything(elements.carrier.value, elements.message.value)
             console.log(performance.now() - start)
